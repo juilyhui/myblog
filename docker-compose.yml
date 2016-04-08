@@ -1,0 +1,30 @@
+bloga:
+    build: ./web
+    expose:
+        - 9899 
+
+blogb:
+    build: ./web
+    expose:
+        - 9899 
+
+blogc:
+    build: ./web
+    expose:
+        - 9899 
+
+haproxy:
+    image: index.tenxcloud.com/tenxcloud/haproxy
+    volumes:
+        - ./haproxy:/haproxy-override
+        - ./haproxy/haproxy.cfg:/etc/haproxy/haproxy.cfg:ro
+    links:
+        - bloga
+        - blogb
+        - blogc
+    ports:
+        - "80:80"
+        - "70:70"
+    expose:
+        - "80"
+        - "70"
