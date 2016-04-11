@@ -1,17 +1,23 @@
 bloga:
     build: ./web
     expose:
-        - 9899 
+        - 9899
+    volumes:
+        - ./web/myblog/bin/source/post/:/myblog/bin/source/post/:ro
 
 blogb:
     build: ./web
     expose:
-        - 9899 
+        - 9899
+    volumes:
+        - ./web/myblog/bin/source/post/:/myblog/bin/source/post/:ro
 
 blogc:
     build: ./web
     expose:
-        - 9899 
+        - 9899
+    volumes:
+        - ./web/myblog/bin/source/post/:/myblog/bin/source/post/:ro
 
 haproxy:
     image: index.tenxcloud.com/tenxcloud/haproxy
