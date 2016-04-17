@@ -1,6 +1,6 @@
 [meta]
 # site title, show in <title>
-title = "izgnode"
+title = "juily"
 
 # subtitle, words after title, in description
 subtitle = "Blog"
@@ -9,7 +9,7 @@ subtitle = "Blog"
 keyword = "pugo,golang,static,site,generator"
 
 # print in html <meta>
-desc = "izgnode is such a nice person"
+desc = "juily is such a nice person"
 
 # build links for feed, sitemap
 domain = "localhost"
